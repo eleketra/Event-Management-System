@@ -1,0 +1,28 @@
+package main;
+import java.sql.*;
+public class example {
+
+	public static void main(String[] args) {
+		try{
+			Class.forName("com.Mysql.jdbc.Driver");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/ankita","ankita","ankita");
+			Statement stmt=con.createStatement();
+			ResultSet rst=stmt.executeQuery("select * from student");
+			while(rst.next())
+				
+			{
+				  if(rst.getString("fname").equals("ankita"))
+				  {
+				System.out.println(rst.getInt("Student_Id")+" "+rst.getString("fname")+" "+rst.getString("lname"));
+			}
+			}
+			con.close();
+		}
+		catch(Exception e)
+		{
+			System.out.println("error "+e);
+		}
+
+	}
+
+}

@@ -1,0 +1,51 @@
+package main;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.Color;
+import java.awt.Font;
+
+public class NotificationsAdmin {
+
+	private JFrame frmNotification;
+
+	/**
+	 * Launch the application.
+	 */
+	
+
+	/**
+	 * Create the application.
+	 */
+	public NotificationsAdmin() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmNotification = new JFrame();
+		frmNotification.getContentPane().setBackground(new Color(175, 238, 238));
+		frmNotification.setTitle("Notification");
+		frmNotification.setBounds(100, 100, 367, 186);
+		frmNotification.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmNotification.getContentPane().setLayout(null);
+		
+		JLabel result = new JLabel("");
+		result.setForeground(Color.WHITE);
+		result.setFont(new Font("Times New Roman", Font.BOLD, 12));
+		result.setBounds(44, 25, 276, 37);
+		frmNotification.getContentPane().add(result);
+		
+		JButton btnNewButton = new JButton("Register Now");
+		btnNewButton.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 15));
+		btnNewButton.setForeground(new Color(0, 0, 0));
+		btnNewButton.setBounds(105, 92, 130, 30);
+		frmNotification.getContentPane().add(btnNewButton);
+	}
+
+}
